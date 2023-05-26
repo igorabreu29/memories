@@ -25,6 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const isAuthenticated = cookies().has('token')
+  
   return (
     <html lang="pt-br">
       <body className={`${roboto.variable} ${jamjuree.variable} font-sans bg-gray-900 text-gray-100`}>
