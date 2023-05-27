@@ -6,7 +6,11 @@ export function middleware(req: NextRequest) {
     const token = req.cookies.get('token')?.value
 
     if (!token) {
-        return NextResponse.redirect(signIn)
+        return NextResponse.redirect(signIn, {
+            headers: {
+                'Set-cookie': `redirectTo=${req.url}; Path=/; HttpOnly; max-age=20'`
+            }
+        })
     } 
 
     return NextResponse.next()
