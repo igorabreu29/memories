@@ -3,7 +3,7 @@ import { z } from "zod";
 import axios from 'axios'
 import { prisma } from "../lib/prisma";
 
-export async function registerUser(app: FastifyInstance) {
+export async function registerRoutes(app: FastifyInstance) {
     app.post('/register', async (req) => {
         const bodySchema = z.object({
             code: z.string()
