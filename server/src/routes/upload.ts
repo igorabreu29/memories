@@ -1,14 +1,14 @@
 import { randomUUID } from "node:crypto";
 import { extname, resolve } from "node:path";
-import { FastifyInstance } from "fastify";
 import { createWriteStream } from "node:fs";
-import { promisify } from "node:util";
-import { pipeline } from "node:stream";
+import { FastifyInstance } from "fastify";
+import { pipeline} from 'node:stream'
+import { promisify } from 'node:util'
 
 const pump = promisify(pipeline)
 
 export async function uploadRoutes(app: FastifyInstance) {
-    app.post('/uploads', async (req, res) => {
+    app.post('/upload', async (req, res) => {
 
         // Buscar arquivo da req
         const upload = await req.file({
