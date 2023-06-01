@@ -34,6 +34,12 @@ export function MediaPicker() {
                     className="aspect-video w-full rounded-lg object-cover" 
                 />
             )}
+
+            {/* {preview && (
+                <video width={220} height={180} controls className="aspect-video w-full rounded-lg object-cover" >
+                    <source src={preview} type='video/mp4' />
+                </video>
+            )} */}
         </>
     )   
 }
