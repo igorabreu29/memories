@@ -21,7 +21,7 @@ export async function routesMemories(app: FastifyInstance) {
             return {
                 id: memory.id,
                 coverUrl: memory.coverUrl,
-                except: memory.content.substring(0, 115).concat('...'),
+                excerpt: memory.content.substring(0, 115).concat('...'),
                 createdAt: memory.createdAt,
             }
         })
@@ -61,7 +61,7 @@ export async function routesMemories(app: FastifyInstance) {
                 content,
                 coverUrl,
                 isPublic,
-                userId: '3815384a-ce47-4c91-975e-a6d651ababd5'
+                userId: req.user.sub
             }
         })
 

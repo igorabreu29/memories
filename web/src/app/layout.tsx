@@ -1,4 +1,3 @@
-import { EmptyMemories } from '@/components/EmptyMemories'
 import { Footer } from '@/components/Footer'
 import { Hero } from '@/components/Hero'
 import { Profile } from '@/components/Profile'
@@ -47,6 +46,7 @@ export default function RootLayout({
             <Footer />
           </div>
 
+          {/* Right */}
           <div className="flex flex-col bg-[url(../assets/bg-stars.svg)] bg-cover">
             {children}
           </div>

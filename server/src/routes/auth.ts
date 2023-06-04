@@ -1,6 +1,6 @@
 import { FastifyInstance } from "fastify";
-import { z } from "zod";
 import axios from 'axios'
+import { z } from "zod";
 import { prisma } from "../lib/prisma";
 
 export async function registerRoutes(app: FastifyInstance) {
